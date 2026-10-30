@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "errors": [],
+  "checks": 134,
+  "dataset_bound": true,
+  "authenticates_execution": false,
+  "scope": "Record conformance and, when data are supplied, file binding and score recomputation; not execution attestation."
+}

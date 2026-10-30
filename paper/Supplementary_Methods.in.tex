@@ -1,0 +1,175 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array,listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=single,framerule=.3pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\title{Supplementary Methods and Reproducibility Evidence}
+\author{Ali Al Bataineh\\Computer Information Science, Higher Colleges of Technology\\Abu Dhabi, United Arab Emirates\\aalbataineh@hct.ac.ae}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-1em}
+This supplement accompanies \emph{Checking Machine-Learning Workflows Through Evidence Validation, Python Replay, and Counterfactual Tests}. The software release is TraceSplit 0.1.0. Every number below is generated from the saved result files by the script \path{scripts/fill_manuscript.py} in the artifact.
+
+\section{Exact program grammar}
+The following is the distributed Lark grammar. Statement order, allowed names, parameter ranges, and role restrictions are checked after parsing. Each statement occupies one logical line.
+\begin{lstlisting}
+start: (_NL | statement _NL)*
+?statement: read | predict | drop | split | prepare | train | evaluate | select | assess | explain
+read: "read" STRING
+predict: "predict" STRING "as" NAME
+drop: "drop" STRING+
+split: "split" NAME ["by" STRING] "train" PERCENT "validation" PERCENT "test" PERCENT "seed" INT
+prepare: "prepare" "numeric" NAME "scale" NAME "categorical" NAME "on" NAME
+train: "train" NAME NAME parameter* "on" NAME
+parameter: NAME "=" NUMBER
+evaluate: "evaluate" NAME "on" NAME
+select: "select" "best" "by" NAME
+assess: "assess" "best" "on" NAME
+explain: "explain"
+PERCENT: /[0-9]+(\.[0-9]+)?%/
+NUMBER: /[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?/
+%import common.CNAME -> NAME
+%import common.INT
+%import common.ESCAPED_STRING -> STRING
+%import common.NEWLINE -> _NL
+%import common.WS_INLINE
+%ignore WS_INLINE
+%ignore /#[^\n]*/
+\end{lstlisting}
+
+\section{Checker protocol and boundaries}
+The checker tracks an ordered phase and the sets of trained and evaluated candidates. A read advances to target declaration; optional drops precede the unique split; the unique preparation follows the split. Training and validation evaluation can be interleaved. Selection requires a nonempty candidate set and equality of the trained and evaluated sets. Assessment follows selection and is terminal, except for one optional explanation.
+
+The normalized plan retains the source text, its SHA-256 fingerprint, and the source lines. An immutable plan marker prevents accidental bypass through the ordinary API; it is not a security mechanism against callers able to import internal Python objects. The standard-library evidence checker validates the normalized protocol and line metadata but does not parse the source text a second time.
+
+The evidence record contains zero-based positional row identifiers. Partition checks require exhaustive, disjoint coverage and at least two rows per partition. Grouped splits forbid a group appearing in two partitions. Temporal splits require strictly ordered boundary keys. Source-level rules exclude the target and split metadata from predictors. They cannot identify undeclared proxies, mislabeled entities, or leakage introduced before CSV loading.
+
+\section{Numerical configuration}
+All eight numerical programs use 60/20/20 declared proportions and seeds @@seed_list@@. Numeric imputation is median; scaling is standard; categorical imputation is most-frequent with one-hot encoding. Logistic regression uses $C=1$, the limited-memory Broyden-Fletcher-Goldfarb-Shanno (LBFGS) solver, and at most 2,000 iterations. Ridge regression uses $\alpha=1$ and a Cholesky solver. Forests use 40 trees and depth 6. Decision trees use depth 5. Forest workers and numerical library threads are limited to one during execution. Candidate selection uses accuracy for classification and RMSE for regression. Ties retain declaration order. There is no refit on validation.
+
+The stored validation and test metrics are accuracy, balanced accuracy, and macro-F1 for classification, and RMSE, MAE, and $R^2$ for regression. The checker recomputes these scalar metrics from saved predictions and CSV labels with its own arithmetic. The replay compares all candidate validation predictions and metrics as well as the selected candidate's test outputs, at absolute and relative tolerance $10^{-10}$.
+
+\section{Constructed source cases}
+The @@compiler_valid@@ valid source cases combine eight program templates with three numeric imputation methods and two scaling settings. The @@compiler_invalid@@ invalid cases apply @@invalid_families@@ families to each template, eight programs per family. Table~\ref{tab:sourcefamilies} lists the families. All @@compiler_total@@ cases received their expected decision.
+
+\begin{longtable}{p{0.3\textwidth}p{0.62\textwidth}}\caption{Constructed invalid-source families and the modification applied to each template.}\label{tab:sourcefamilies}\\\toprule Family & Modification\\\midrule\endfirsthead\toprule Family & Modification\\\midrule\endhead
+arbitrary\_python & A Python import statement appended to the program.\\
+assess\_validation & Final assessment on the validation partition.\\
+bad\_parameter\_range & Forest size set to zero.\\
+bad\_percentages & Training proportion changed so that the proportions do not sum to 100.\\
+bad\_seed & Seed equal to $2^{32}$.\\
+drop\_target & The target column dropped before the split.\\
+duplicate\_candidate & Two candidates with the same name.\\
+duplicate\_parameter & The same parameter given twice.\\
+evaluate\_test & Validation evaluation directed at the test partition.\\
+fit\_validation & The first candidate fitted on the validation partition.\\
+missing\_assessment & Assessment statement removed.\\
+post\_assessment\_fit & A training statement after assessment.\\
+prepare\_all & Preparation fitted on all rows.\\
+preprocess\_before\_split & Preparation statement moved before the split.\\
+repeated\_prepare & Two preparation statements.\\
+repeated\_split & Two split statements.\\
+second\_assessment & A second assessment statement.\\
+select\_too\_early & Selection before every candidate has been evaluated.\\
+undefined\_candidate & Evaluation of a candidate that was never trained.\\
+unknown\_parameter & A parameter the algorithm does not accept.\\
+unknown\_task & A task other than classification or regression.\\
+unsupported\_algorithm & An algorithm outside the supported set.\\
+wrong\_metric & A selection metric of the other task.\\
+wrong\_task\_algorithm & A regression algorithm in a classification program, or the converse.\\
+\bottomrule\end{longtable}
+
+\section{Altered evidence records}
+Each family in Table~\ref{tab:mutations} was applied once to each of the @@replay_workflows@@ numerical workflows. Where applicable, the mutation generator recomputes chain hashes after changing a semantic field. @@witness_data_only_families@@ families remain well formed without data but become checkable when the source CSV is available.
+
+\begin{longtable}{p{0.4\textwidth}rrr}
+\caption{Record mutations and observed rejection counts with and without the CSV.}\label{tab:mutations}\\
+\toprule Family & Cases & With CSV & Without CSV\\\midrule\endfirsthead
+\toprule Family & Cases & With CSV & Without CSV\\\midrule\endhead
+@@witness_rows@@
+\midrule Total & @@witness_total@@ & @@witness_with@@ & @@witness_without@@\\\bottomrule
+\end{longtable}
+The dataset-fingerprint mutation cannot be rejected merely because the altered hash has a different value. Without the original bytes, the checker has no external value against which to compare it. Likewise, a test metric that is changed consistently throughout the record needs actual labels and recorded predictions to be recomputed.
+
+\section{Counterfactual construction}
+The feature intervention modifies only held-out predictor rows while preserving the fixed partition. It applies $x' = 11x+17$ to numeric test values, preserving missing entries, and replaces categorical test values with \texttt{\_\_HOLDOUT\_ONLY\_CATEGORY\_\_}, within an accepted schema. The label intervention rotates classification labels through the existing class set or adds 17 to regression test labels. Training and validation values are unchanged. Source paths are rewritten only to point to the temporary CSV. Ordinary source programs do not expose the frozen-partition override.
+
+The expected unchanged state consists of preprocessing statistics, fitted-model fingerprints, validation metric dictionaries, and the winner. Test scores and predictions may change and are not part of the invariant. There are @@meta_total@@ correct-engine comparisons, two interventions for each input and seed, and all @@meta_passed@@ passed.
+
+\section{Injected-fault matrix}
+Table~\ref{tab:faultfull} gives the complete outcome counts for the @@fault_mechanisms@@ mechanisms. Table~\ref{tab:faultinput} gives, for each mechanism and input, the number of the five runs in which the echo record was rejected with the CSV, the replay disagreed, and the perturbation changed development state.
+
+\begin{longtable}{p{0.34\textwidth}rrrrrrr}
+\caption{Injected faults: cases, executions whose compared outputs differ from the correct run (Changed; undefined for the data-level fault), honest records rejected with the CSV (Honest), echo records rejected with and without the CSV (Echo, Echo$^{-}$), replay disagreements (Replay), and development-state changes under the held-out feature perturbation (Perturb.).}\label{tab:faultfull}\\
+\toprule Mechanism & Cases & Changed & Honest & Echo & Echo$^{-}$ & Replay & Perturb.\\\midrule\endfirsthead
+\toprule Mechanism & Cases & Changed & Honest & Echo & Echo$^{-}$ & Replay & Perturb.\\\midrule\endhead
+@@fault_matrix_rows@@
+\bottomrule
+\end{longtable}
+
+\setlength{\tabcolsep}{3.5pt}
+\begin{longtable}{p{0.26\textwidth}cccccccc}
+\caption{Injected faults by input. Each cell gives record/replay/perturbation detections over the five seeds, where record denotes rejection of the echo record with the CSV; a dash marks an inapplicable mechanism.}\label{tab:faultinput}\\
+\toprule Mechanism & Iris & Wine & Breast c. & Digits & Diabetes & Mixed & Grouped & Temporal\\\midrule\endfirsthead
+\toprule Mechanism & Iris & Wine & Breast c. & Digits & Diabetes & Mixed & Grouped & Temporal\\\midrule\endhead
+@@fault_matrix_by_input_rows@@
+\bottomrule
+\end{longtable}
+
+The honest record of each mechanism is constructed as follows. For preparation on all rows or on training and validation rows, the preparation event names the rows actually used. For estimators fitted on training and validation rows or on training and test rows, each fit event names the rows actually used. For selection by the test score, the selection event names the test partition. For the refit before assessment, an additional fit event on the training and validation rows is inserted after selection. For the undeclared seed, the recorded plan carries the seed that was actually used. For the ignored partition rule, the recorded plan declares a random strategy and lists the metadata column among the dropped columns. The data-level mechanism has no dishonest variant; its honest and echo records coincide.
+
+\section{Matched comparison with mlw}
+Table~\ref{tab:comparisonerrors} lists, for each family, the error code raised by the TraceSplit checker and the exception class raised by mlw @@mlw_version@@, running on pandas @@mlw_pandas@@ in a separate environment whose pinned versions are in \texttt{experiments/comparison/requirements-mlw.txt}. The partition registry of mlw was cleared before every case. After the run, its in-process audit chain held @@mlw_audit_entries@@ entries and verified as intact. The mlw cases use the scikit-learn engine, the logistic or linear algorithm, an explicit task, and the default 60/20/20 ratio; grouped and temporal inputs pass the metadata column through the groups and time arguments of split.
+
+\begin{longtable}{p{0.38\textwidth}p{0.27\textwidth}p{0.25\textwidth}}
+\caption{Error codes raised by each tool for each family on the eight inputs. A dash marks acceptance on every input.}\label{tab:comparisonerrors}\\
+\toprule Family & TraceSplit & mlw\\\midrule\endfirsthead
+\toprule Family & TraceSplit & mlw\\\midrule\endhead
+@@comparison_error_rows@@
+\bottomrule
+\end{longtable}
+
+\section{All observed selected-candidate test scores}
+Table~\ref{tab:scores} reports each run's selected candidate and descriptive test score. Candidate selection was based on validation, not on these scores. The table is included for traceability and supports no comparison between learning algorithms. The temporal split is deterministic, so the five temporal runs differ only in the forest seed, and the selected linear candidate yields the same score in each.
+
+\begin{longtable}{lrrlr}
+\caption{Descriptive test outputs for all @@replay_workflows@@ numerical workflows.}\label{tab:scores}\\
+\toprule Input & Seed & Metric & Selected & Test value\\\midrule\endfirsthead
+\toprule Input & Seed & Metric & Selected & Test value\\\midrule\endhead
+@@score_rows@@
+\bottomrule\end{longtable}
+
+\section{Timing and test evidence}
+The raw timing table has one row per paired observation: input rows, repetition, execution order, language time, precompiled-plan time, and their difference in milliseconds. The first @@runtime_warmups@@ pairs at each size are warm-ups and are excluded from the @@runtime_pairs@@ measured pairs. A seeded @@bootstrap_resamples@@-resample percentile bootstrap is applied to the paired median. The observations include CSV loading and in-memory evidence creation but exclude interpreter startup, disk serialization, external validation, and the replay subprocess.
+
+The test suite passed @@tests_total@@ tests with @@tests_failed@@ failures. Statement coverage was @@coverage_pct@@\% of @@coverage_statements@@ statements; the per-module values are in the machine-readable coverage report. A separate smoke script runs the command-line interface, the standard-library checker, the exported Python, and the numerical comparison in subprocesses. The checker can be invoked with \texttt{python -S}, which disables site-package initialization.
+
+\section{Artifact file map}
+Table~\ref{tab:files} connects the implementation and recorded results to the reviewer tasks.
+\begin{longtable}{p{0.44\textwidth}p{0.49\textwidth}}\caption{Artifact files and their roles.}\label{tab:files}\\\toprule Path & Purpose\\\midrule\endfirsthead\toprule Path & Purpose\\\midrule\endhead
+\path{src/tracesplit/grammar.lark} & Exact syntax.\\
+\path{src/tracesplit/language.py} & Parser and source-level checking.\\
+\path{src/tracesplit/engine.py} & Input validation, partition construction, preprocessing, and learning.\\
+\path{src/tracesplit/verifier.py} & Standard-library record checking and metric recomputation.\\
+\path{src/tracesplit/replay_template.py.txt} & Separately assembled numerical replay.\\
+\path{experiments/reproduce.py} & Conformance, replay, altered-record, counterfactual, and runtime stages.\\
+\path{experiments/fault_matrix.py} & Injected-fault mechanisms, honest and echo records, and the three oracles.\\
+\path{experiments/comparison/} & Matched protocol-violation cases for both tools and the merge script.\\
+\path{results/full/runs/} & All run records, predictions, explanations, replays, and exports.\\
+\path{results/full/*_cases.csv} & Constructed cases and counterfactual outcomes.\\
+\path{results/full/witness_mutations.csv} & Per-workflow altered-record outcomes.\\
+\path{results/full/fault_matrix.csv} & Per-execution injected-fault outcomes.\\
+\path{results/full/comparison/} & Per-input outcomes of the matched comparison.\\
+\path{results/full/runtime_pairs.csv} & Raw measured runtime pairs.\\
+\path{scripts/build_report.py} & Derived summaries and figures.\\
+\path{scripts/fill_manuscript.py} & Numbers in the article and in this supplement.\\
+\path{docs/REVIEWER_GUIDE.md} & Installation and expected outcomes.\\\bottomrule
+\end{longtable}
+
+\section{Local interface}
+The local application is a standard-library HTTP interface with editable examples and tabs for results, the explanation, the evidence record, and the exported Python. It runs one bounded subprocess at a time, binds to the loopback address, and requires a per-run token. It is a convenience for inspection, not a hardened service. Its routes are covered by automated tests, and it was exercised end to end in a browser on the author's computer.
+\end{document}

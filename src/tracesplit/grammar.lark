@@ -1,0 +1,22 @@
+start: (_NL | statement _NL)*
+?statement: read | predict | drop | split | prepare | train | evaluate | select | assess | explain
+read: "read" STRING
+predict: "predict" STRING "as" NAME
+drop: "drop" STRING+
+split: "split" NAME ["by" STRING] "train" PERCENT "validation" PERCENT "test" PERCENT "seed" INT
+prepare: "prepare" "numeric" NAME "scale" NAME "categorical" NAME "on" NAME
+train: "train" NAME NAME parameter* "on" NAME
+parameter: NAME "=" NUMBER
+evaluate: "evaluate" NAME "on" NAME
+select: "select" "best" "by" NAME
+assess: "assess" "best" "on" NAME
+explain: "explain"
+PERCENT: /[0-9]+(\.[0-9]+)?%/
+NUMBER: /[+-]?[0-9]+(\.[0-9]+)?([eE][+-]?[0-9]+)?/
+%import common.CNAME -> NAME
+%import common.INT
+%import common.ESCAPED_STRING -> STRING
+%import common.NEWLINE -> _NL
+%import common.WS_INLINE
+%ignore WS_INLINE
+%ignore /#[^\n]*/

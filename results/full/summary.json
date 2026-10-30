@@ -1,0 +1,170 @@
+{
+  "compiler": {
+    "valid": 48,
+    "invalid": 192,
+    "correct": 240,
+    "total": 240
+  },
+  "replay": {
+    "workflows": 40,
+    "candidate_fits_per_execution_path": 120,
+    "passed": 40,
+    "max_absolute_difference": 0.0
+  },
+  "witness_mutations": {
+    "families": 15,
+    "total": 600,
+    "rejected_with_data": 600,
+    "rejected_without_data": 520
+  },
+  "metamorphic": {
+    "total": 80,
+    "passed": 80
+  },
+  "negative_controls": {
+    "total": 40,
+    "honest_leaky_trace_rejected": 40,
+    "fabricated_leaky_trace_accepted": 40,
+    "replay_output_difference_detected": 26,
+    "holdout_perturbation_detected": 40
+  },
+  "fault_matrix": [
+    {
+      "fault": "prepare_all_rows",
+      "cases": 40,
+      "outputs_differ_from_correct": 26,
+      "selected_differs_from_correct": 2,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 26,
+      "perturbation_detected": 40
+    },
+    {
+      "fault": "prepare_train_validation",
+      "cases": 40,
+      "outputs_differ_from_correct": 23,
+      "selected_differs_from_correct": 1,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 23,
+      "perturbation_detected": 0
+    },
+    {
+      "fault": "fit_train_validation",
+      "cases": 40,
+      "outputs_differ_from_correct": 39,
+      "selected_differs_from_correct": 21,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 39,
+      "perturbation_detected": 0
+    },
+    {
+      "fault": "test_rows_in_training",
+      "cases": 40,
+      "outputs_differ_from_correct": 40,
+      "selected_differs_from_correct": 7,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 40,
+      "perturbation_detected": 40
+    },
+    {
+      "fault": "select_by_test",
+      "cases": 40,
+      "outputs_differ_from_correct": 10,
+      "selected_differs_from_correct": 10,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 10,
+      "echo_record_rejected_without_csv": 10,
+      "replay_detected": 10,
+      "perturbation_detected": 19
+    },
+    {
+      "fault": "refit_before_assessment",
+      "cases": 40,
+      "outputs_differ_from_correct": 27,
+      "selected_differs_from_correct": 0,
+      "honest_record_rejected_with_csv": 40,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 27,
+      "perturbation_detected": 0
+    },
+    {
+      "fault": "undeclared_seed",
+      "cases": 40,
+      "outputs_differ_from_correct": 33,
+      "selected_differs_from_correct": 4,
+      "honest_record_rejected_with_csv": 0,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 33,
+      "perturbation_detected": 0
+    },
+    {
+      "fault": "partition_rule_ignored",
+      "cases": 10,
+      "outputs_differ_from_correct": 10,
+      "selected_differs_from_correct": 2,
+      "honest_record_rejected_with_csv": 0,
+      "echo_record_rejected_with_csv": 10,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 0,
+      "perturbation_detected": 0
+    },
+    {
+      "fault": "target_proxy_column",
+      "cases": 40,
+      "outputs_differ_from_correct": null,
+      "selected_differs_from_correct": null,
+      "honest_record_rejected_with_csv": 0,
+      "echo_record_rejected_with_csv": 0,
+      "echo_record_rejected_without_csv": 0,
+      "replay_detected": 0,
+      "perturbation_detected": 0
+    }
+  ],
+  "verification_median_ms": 3.6529499921016,
+  "runtime": [
+    {
+      "rows": 200,
+      "pairs": 25,
+      "median_language_ms": 36.311900010332465,
+      "median_plan_api_ms": 35.179899976355955,
+      "median_paired_difference_ms": 0.33909999183379114,
+      "paired_difference_95pct_bootstrap_ci_ms": [
+        -0.8837999776005745,
+        2.7422999555710703
+      ]
+    },
+    {
+      "rows": 2000,
+      "pairs": 25,
+      "median_language_ms": 64.73169999662787,
+      "median_plan_api_ms": 64.21329997829162,
+      "median_paired_difference_ms": 1.0751000372692943,
+      "paired_difference_95pct_bootstrap_ci_ms": [
+        -0.16969998250715435,
+        2.927999972598627
+      ]
+    },
+    {
+      "rows": 10000,
+      "pairs": 25,
+      "median_language_ms": 163.94389999913983,
+      "median_plan_api_ms": 167.31060002348386,
+      "median_paired_difference_ms": 0.07639999967068434,
+      "paired_difference_95pct_bootstrap_ci_ms": [
+        -3.207400004612282,
+        2.0303000055719167
+      ]
+    }
+  ],
+  "no_human_study": true,
+  "no_external_tool_head_to_head": true
+}

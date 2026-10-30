@@ -1,0 +1,30 @@
+{
+  "seeds": [
+    0,
+    1,
+    7,
+    42,
+    2026
+  ],
+  "datasets": [
+    "iris",
+    "wine",
+    "breast_cancer",
+    "digits",
+    "diabetes",
+    "mixed",
+    "grouped",
+    "temporal"
+  ],
+  "prediction_atol": 1e-10,
+  "prediction_rtol": 1e-10,
+  "runtime_rows": [
+    200,
+    2000,
+    10000
+  ],
+  "runtime_repetitions": 25,
+  "runtime_warmups": 3,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 90210
+}

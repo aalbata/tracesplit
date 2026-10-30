@@ -1,0 +1,105 @@
+dataset,family,expected_accept,mlw_accepted,mlw_error,mlw_message
+iris,valid_workflow,True,True,,
+iris,fit_validation,False,True,,
+iris,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+iris,prepare_all,False,True,,
+iris,preprocess_before_split,False,True,,
+iris,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+iris,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+iris,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+iris,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+iris,post_assessment_fit,False,True,,
+iris,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+iris,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+iris,missing_assessment,False,True,,
+wine,valid_workflow,True,True,,
+wine,fit_validation,False,True,,
+wine,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+wine,prepare_all,False,True,,
+wine,preprocess_before_split,False,True,,
+wine,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+wine,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+wine,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+wine,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+wine,post_assessment_fit,False,True,,
+wine,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+wine,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+wine,missing_assessment,False,True,,
+breast_cancer,valid_workflow,True,True,,
+breast_cancer,fit_validation,False,True,,
+breast_cancer,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+breast_cancer,prepare_all,False,True,,
+breast_cancer,preprocess_before_split,False,True,,
+breast_cancer,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+breast_cancer,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+breast_cancer,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+breast_cancer,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+breast_cancer,post_assessment_fit,False,True,,
+breast_cancer,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+breast_cancer,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+breast_cancer,missing_assessment,False,True,,
+digits,valid_workflow,True,True,,
+digits,fit_validation,False,True,,
+digits,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+digits,prepare_all,False,True,,
+digits,preprocess_before_split,False,True,,
+digits,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+digits,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+digits,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+digits,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+digits,post_assessment_fit,False,True,,
+digits,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+digits,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+digits,missing_assessment,False,True,,
+diabetes,valid_workflow,True,True,,
+diabetes,fit_validation,False,True,,
+diabetes,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+diabetes,prepare_all,False,True,,
+diabetes,preprocess_before_split,False,True,,
+diabetes,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+diabetes,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+diabetes,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+diabetes,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+diabetes,post_assessment_fit,False,True,,
+diabetes,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+diabetes,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+diabetes,missing_assessment,False,True,,
+mixed,valid_workflow,True,True,,
+mixed,fit_validation,False,True,,
+mixed,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+mixed,prepare_all,False,True,,
+mixed,preprocess_before_split,False,True,,
+mixed,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+mixed,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+mixed,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+mixed,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+mixed,post_assessment_fit,False,True,,
+mixed,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+mixed,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+mixed,missing_assessment,False,True,,
+grouped,valid_workflow,True,True,,
+grouped,fit_validation,False,True,,
+grouped,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+grouped,prepare_all,False,True,,
+grouped,preprocess_before_split,False,True,,
+grouped,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+grouped,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+grouped,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+grouped,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+grouped,post_assessment_fit,False,True,,
+grouped,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+grouped,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+grouped,missing_assessment,False,True,,
+temporal,valid_workflow,True,True,,
+temporal,fit_validation,False,True,,
+temporal,fit_test,False,False,PartitionError,"fit() received data identified as 'test' partition. fit() accepts train, valid, or dev data. Use: ml.fit(s.train, ...) or ml.fit(s.dev, ...)"
+temporal,prepare_all,False,True,,
+temporal,preprocess_before_split,False,True,,
+temporal,evaluate_test,False,False,PartitionError,"evaluate() received data identified as 'test' partition. evaluate() is the practice exam — use validation data. For the final exam, use ml.assess(model, test=s.test)."
+temporal,assess_validation,False,False,PartitionError,"assess() received data identified as 'valid' partition. assess() requires test data (s.test). For validation iterations, use ml.evaluate(model, s.valid)."
+temporal,second_assessment,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+temporal,select_by_test,False,False,PartitionError,"assess() called on a test holdout that has already been assessed. The test set gets one assessment per holdout, regardless of which model. Use ml.evaluate(model, s.valid) for model comparison. To get "
+temporal,post_assessment_fit,False,True,,
+temporal,test_rows_in_training,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+temporal,unsplit_fit,False,False,PartitionError,"fit() received data without split provenance. Split your data first: s = ml.split(df, target, seed=42), then ml.fit(s.train, target, seed=42). To disable: ml.config(guards='off')"
+temporal,missing_assessment,False,True,,

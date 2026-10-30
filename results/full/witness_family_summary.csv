@@ -1,0 +1,16 @@
+family,cases,with_csv,without_csv
+assess_scope,40,40,40
+broken_chain,40,40,40
+dataset_fingerprint,40,40,0
+evaluate_scope,40,40,40
+fit_scope,40,40,40
+metric_recomputed_chain,40,40,0
+model_fingerprint,40,40,40
+partition_omission,40,40,40
+partition_overlap,40,40,40
+prepare_fit_scope,40,40,40
+preprocessing_fingerprint,40,40,40
+second_assessment,40,40,40
+source_fingerprint,40,40,40
+source_location,40,40,40
+wrong_selection,40,40,40

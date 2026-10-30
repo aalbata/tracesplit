@@ -1,0 +1,11 @@
+{
+  "rows": 2000,
+  "pairs": 25,
+  "median_language_ms": 64.73169999662787,
+  "median_plan_api_ms": 64.21329997829162,
+  "median_paired_difference_ms": 1.0751000372692943,
+  "paired_difference_95pct_bootstrap_ci_ms": [
+    -0.16969998250715435,
+    2.927999972598627
+  ]
+}

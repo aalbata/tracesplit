@@ -1,0 +1,84 @@
+"""Standalone Python replay. Only public scientific Python libraries are used.
+
+The split is frozen to separate execution equivalence from split generation.
+The source dataset is fingerprint-checked. Editing this file removes any
+claim that it is the unmodified export tested in the research artifact.
+"""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression, Ridge
+from sklearn.metrics import accuracy_score, balanced_accuracy_score, f1_score, mean_absolute_error, r2_score, root_mean_squared_error
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
+from threadpoolctl import threadpool_limits
+
+SPEC = {'dataset_sha256': '8b1ba31dae39a01ac803c55986ce0ae528c32b65b88471b4884bd4048535b40c', 'partitions': {'train': [734, 715, 1185, 718, 571, 1040, 1604, 584, 1455, 690, 744, 687, 1600, 257, 360, 1381, 1679, 251, 42, 54, 1010, 1262, 490, 929, 1577, 1677, 76, 1272, 409, 1315, 16, 1131, 1244, 1004, 186, 1283, 767, 616, 1227, 1248, 448, 331, 772, 1309, 1705, 137, 368, 808, 1087, 1658, 246, 94, 1338, 915, 1284, 138, 759, 262, 1554, 546, 788, 1180, 1460, 207, 401, 187, 1768, 43, 1139, 1236, 1491, 1176, 1721, 415, 1308, 1230, 1520, 572, 1168, 840, 1, 748, 74, 391, 830, 659, 310, 1214, 149, 463, 451, 1193, 1080, 494, 194, 668, 320, 897, 1623, 101, 132, 1329, 11, 1112, 1771, 853, 127, 1487, 632, 1251, 1203, 179, 1724, 1273, 1727, 531, 1449, 1298, 135, 1657, 334, 1627, 648, 1659, 453, 1058, 775, 1392, 1663, 749, 1263, 460, 1360, 1154, 1351, 591, 1182, 1018, 1675, 1439, 1463, 358, 954, 524, 354, 1072, 1247, 1313, 541, 891, 333, 1686, 1213, 167, 126, 330, 1166, 1736, 1594, 372, 819, 994, 596, 773, 2, 1402, 1207, 63, 509, 587, 1625, 700, 1441, 359, 271, 1043, 297, 219, 829, 235, 582, 1755, 776, 473, 122, 1510, 1187, 38, 905, 696, 972, 1550, 719, 539, 1779, 1208, 1345, 619, 863, 1430, 321, 1264, 536, 429, 637, 806, 1593, 899, 1062, 820, 777, 610, 859, 917, 1429, 1646, 640, 267, 781, 1153, 1582, 856, 1443, 755, 965, 948, 493, 1335, 1330, 172, 20, 1115, 168, 922, 51, 479, 1695, 206, 890, 742, 1590, 1420, 693, 785, 285, 599, 1074, 1739, 4, 1020, 214, 1064, 1399, 1453, 203, 1027, 1687, 1587, 1209, 543, 1641, 1620, 1725, 517, 801, 672, 1378, 1194, 691, 436, 520, 634, 1672, 1127, 990, 1711, 570, 703, 707, 937, 652, 762, 946, 1379, 355, 192, 1640, 157, 319, 1317, 1787, 1478, 1268, 86, 1334, 1758, 711, 958, 1448, 902, 1777, 795, 1490, 96, 328, 1783, 272, 1626, 427, 662, 1177, 248, 353, 366, 349, 1497, 405, 45, 23, 1267, 1444, 667, 445, 862, 1075, 1084, 1409, 1174, 438, 1362, 835, 329, 381, 1277, 1766, 464, 664, 895, 523, 1201, 589, 1421, 408, 25, 1143, 1019, 425, 1369, 549, 433, 97, 1328, 649, 170, 1242, 1655, 133, 883, 1437, 99, 1094, 1024, 1566, 1224, 1078, 1030, 162, 305, 15, 1151, 182, 1000, 399, 1162, 1196, 1172, 825, 1685, 237, 411, 1160, 1305, 552, 1372, 1708, 502, 1023, 1290, 892, 1110, 1644, 1601, 435, 561, 283, 1716, 606, 1383, 1071, 434, 908, 218, 117, 836, 1060, 699, 100, 1609, 790, 909, 1465, 1123, 1349, 68, 638, 547, 1789, 73, 904, 1719, 968, 178, 191, 1188, 910, 1282, 384, 778, 1126, 651, 286, 544, 740, 1036, 350, 302, 1652, 1476, 5, 689, 886, 1744, 31, 1523, 944, 49, 1114, 95, 1229, 175, 141, 928, 1175, 1643, 1791, 1788, 32, 1163, 1218, 154, 116, 1303, 472, 1795, 880, 957, 743, 1300, 633, 1759, 1474, 1385, 1732, 1178, 1092, 1607, 223, 1022, 1102, 1734, 1457, 1628, 1782, 498, 1764, 1304, 106, 114, 1191, 1445, 495, 1691, 1653, 65, 1540, 1205, 669, 314, 985, 1793, 1785, 1249, 118, 1320, 513, 557, 1133, 1414, 129, 1493, 61, 121, 1237, 941, 1250, 1470, 152, 389, 1217, 499, 332, 458, 986, 1517, 834, 1613, 159, 750, 1359, 1200, 925, 1085, 1145, 29, 604, 1056, 1424, 280, 1551, 726, 386, 128, 951, 1344, 1140, 624, 181, 1353, 723, 1038, 1586, 510, 483, 1710, 83, 70, 1149, 1002, 1314, 877, 683, 1171, 731, 973, 161, 867, 1500, 551, 712, 1161, 452, 1286, 0, 443, 1563, 923, 482, 93, 1774, 1446, 325, 656, 1293, 1192, 1057, 41, 1508, 1343, 1204, 988, 418, 1496, 275, 1671, 1255, 936, 18, 1738, 607, 7, 727, 757, 575, 534, 1404, 131, 1567, 193, 1148, 1221, 1105, 1373, 1747, 309, 956, 344, 1054, 1518, 913, 553, 1632, 1098, 204, 1495, 1341, 1756, 1650, 717, 542, 345, 505, 730, 395, 130, 1396, 34, 919, 1531, 593, 239, 1558, 873, 1183, 1475, 1045, 233, 1525, 1712, 1069, 955, 1580, 1707, 1664, 1128, 1483, 1718, 1419, 1617, 383, 222, 1692, 1667, 90, 802, 1775, 213, 197, 1367, 80, 857, 1581, 231, 1502, 1473, 455, 1458, 89, 914, 1794, 574, 59, 976, 896, 1514, 504, 1407, 967, 1731, 595, 903, 1391, 702, 1120, 113, 195, 1093, 682, 1266, 432, 1198, 276, 444, 592, 838, 317, 1119, 930, 1411, 818, 752, 261, 24, 842, 1394, 112, 12, 362, 735, 1325, 894, 1569, 875, 1673, 578, 1077, 1271, 439, 254, 110, 1636, 586, 728, 576, 1515, 205, 107, 824, 970, 491, 1141, 756, 528, 1015, 538, 413, 532, 1310, 847, 952, 416, 6, 774, 940, 1088, 975, 797, 367, 789, 984, 468, 1001, 146, 1301, 1561, 156, 437, 1158, 202, 160, 566, 1688, 1585, 44, 1547, 1544, 583, 916, 273, 1318, 1012, 1485, 253, 864, 1135, 396, 1257, 641, 1384, 69, 459, 1365, 47, 722, 1486, 971, 585, 889, 322, 665, 1717, 1499, 1089, 1436, 1228, 215, 1033, 1423, 1294, 164, 1068, 1005, 1529, 263, 1332, 816, 265, 36, 630, 555, 745, 440, 402, 140, 514, 898, 365, 1784, 613, 1678, 647, 679, 1079, 91, 1363, 823, 287, 1647, 1472, 1101, 134, 441, 449, 481, 737, 1389, 1790, 1615, 799, 791, 242, 1532, 1541, 1326, 725, 1107, 921, 969, 241, 1319, 770, 716, 831, 1770, 1292, 1220, 878, 1603, 694, 800, 211, 1522, 304, 567, 581, 1610, 833, 645, 784, 1129, 62, 221, 1137, 646, 1238, 1400, 1206, 1065, 1639, 1130, 1258, 609, 677, 708, 625, 1100, 1596, 1676, 980, 1270, 738, 855, 424, 1260, 19, 364, 48, 1053, 1761, 226, 166, 901, 697, 827, 1355, 1693, 1462, 761, 1698, 199, 1488, 327, 1150, 1674, 255, 1763, 1720, 906, 477, 1195, 1347, 559, 1598, 374, 935, 1743, 1638, 964, 782, 577, 348, 500, 1680, 1660, 295, 103, 284, 1762, 751, 658, 1635, 335, 21, 811, 243, 245, 1339, 597, 1703, 64, 678, 1649, 1765, 870, 382, 692, 264, 1454, 300, 457, 1614, 201, 1498, 486, 1377, 655, 488, 87, 1138, 1050, 1630, 1696, 1772, 50, 1533, 1591, 104, 1285, 1545, 1682, 250, 926, 216, 1792, 58, 1754, 224, 1199, 512, 1479, 298, 526, 724, 79, 1003, 497, 388, 337, 1370, 1356, 1371, 1197, 1778, 519, 614, 1539, 741, 1082, 1189, 565, 805, 1690, 556, 392, 293, 1116, 1358, 1397, 1287, 84, 1121, 1602, 729, 709, 1750, 732, 407, 1398, 563, 311, 379, 323, 1748, 480, 1749, 1039, 1179, 1240, 40, 1431, 1557, 1572, 145, 1509, 1621, 296, 8, 569, 579, 1564, 290, 1537, 387, 1259, 1211, 1769, 454, 1364, 1190, 843, 249, 1776, 244, 1368, 1157, 629, 1467, 1405, 590], 'validation': [269, 28, 470, 1507, 1375, 684, 1524, 385, 1357, 1241, 1232, 1589, 623, 428, 644, 1181, 796, 1624, 533, 1773, 120, 1669, 1702, 378, 961, 419, 1136, 1159, 1701, 1576, 1106, 1534, 706, 301, 900, 1683, 1480, 720, 225, 82, 1202, 404, 527, 1780, 934, 826, 885, 963, 792, 1505, 1434, 153, 1006, 1380, 979, 931, 30, 171, 81, 851, 139, 1337, 1713, 506, 318, 1608, 1336, 185, 1575, 351, 1311, 631, 66, 1011, 158, 927, 398, 1031, 240, 736, 1395, 580, 462, 1113, 397, 1459, 1451, 1029, 1584, 150, 681, 119, 155, 1083, 446, 1670, 190, 338, 1595, 1132, 685, 417, 1633, 1144, 1606, 1164, 1477, 817, 1146, 780, 1170, 1307, 420, 1103, 1070, 376, 142, 932, 1049, 1751, 626, 1252, 680, 768, 1438, 1654, 1327, 1611, 196, 1729, 621, 55, 236, 124, 943, 180, 279, 1095, 3, 852, 701, 229, 1464, 17, 1361, 848, 1651, 1714, 1261, 471, 403, 380, 52, 1447, 53, 636, 1619, 212, 1096, 1422, 1026, 783, 9, 1117, 981, 412, 347, 598, 1155, 256, 1231, 798, 1109, 1543, 313, 1484, 959, 1456, 1406, 220, 786, 1253, 1186, 1579, 537, 1709, 653, 837, 657, 230, 815, 516, 487, 1299, 733, 550, 92, 1560, 1086, 1061, 1210, 987, 1382, 200, 522, 710, 98, 1535, 721, 1216, 1432, 1494, 1416, 324, 1246, 1555, 169, 1393, 1245, 1041, 1571, 1662, 1700, 259, 209, 1348, 612, 907, 315, 763, 1425, 268, 1737, 274, 1656, 266, 346, 508, 1233, 33, 1017, 1219, 887, 1044, 1265, 874, 1553, 1562, 1666, 511, 343, 1668, 1468, 1574, 1032, 1521, 603, 1295, 294, 299, 871, 14, 1051, 1235, 1549, 793, 447, 163, 183, 1028, 277, 189, 1573, 247, 1297, 1009, 841, 803, 238, 995, 1418, 617, 1165, 1156, 1715, 518, 1386, 210, 1013, 1528, 102, 1048, 478, 1296, 1681, 507, 56, 1542, 60, 872, 787, 1081, 670, 1645, 663, 88, 465, 1482, 1073, 1622, 1599, 1556, 1530, 673, 1324, 881, 1648, 1278, 1408, 876, 426, 939, 136, 1588, 982, 1034, 308, 1746, 698, 947, 1440, 1723, 1316, 1415, 1134, 1234, 165, 208, 521, 1008, 176, 1111, 1212, 461, 1634, 643, 144, 1223, 1661, 1169, 67, 1125, 949, 1506, 992, 615, 1331, 1538, 1740], 'test': [1274, 705, 660, 1689, 991, 173, 620, 746, 1387, 1428, 765, 288, 1055, 924, 1354, 1279, 13, 1342, 1466, 1512, 611, 316, 1388, 1366, 282, 1376, 35, 151, 1243, 809, 1706, 1099, 450, 601, 475, 962, 1618, 37, 1435, 545, 920, 1427, 1306, 1067, 844, 1340, 258, 1481, 484, 442, 618, 373, 573, 1275, 1471, 326, 1570, 1757, 608, 1167, 1578, 303, 966, 1280, 492, 525, 406, 822, 306, 1726, 1501, 10, 554, 548, 503, 336, 1730, 431, 888, 1035, 893, 974, 1637, 868, 1042, 400, 1704, 530, 560, 938, 911, 1025, 654, 1226, 627, 501, 933, 469, 1616, 564, 628, 227, 686, 339, 849, 340, 639, 278, 1665, 1413, 22, 105, 1592, 1513, 1390, 997, 588, 1256, 1147, 1583, 292, 1786, 369, 1752, 489, 814, 850, 695, 832, 26, 422, 760, 341, 1239, 77, 804, 289, 361, 1014, 1694, 57, 1559, 998, 111, 1735, 568, 496, 999, 1767, 766, 39, 123, 1492, 109, 1516, 1276, 78, 989, 1124, 1548, 1254, 414, 1503, 860, 421, 85, 410, 1076, 1173, 983, 821, 769, 605, 115, 466, 1097, 1152, 1519, 764, 1699, 661, 918, 423, 671, 1122, 675, 307, 1631, 758, 1118, 1066, 635, 754, 177, 342, 1796, 600, 1333, 485, 839, 377, 1684, 529, 861, 474, 1527, 1504, 794, 467, 217, 1526, 1059, 739, 1047, 1511, 1104, 147, 1346, 1629, 1760, 456, 71, 1442, 1021, 1742, 1461, 858, 813, 1291, 356, 1007, 312, 75, 845, 1269, 148, 807, 234, 978, 676, 1322, 1469, 996, 866, 779, 232, 1323, 1552, 1745, 869, 1090, 46, 1605, 1037, 950, 854, 1403, 1452, 747, 1016, 1568, 1412, 370, 1063, 1352, 1417, 884, 1046, 714, 535, 642, 688, 430, 363, 1222, 879, 753, 1697, 72, 143, 1753, 515, 812, 953, 375, 666, 977, 558, 602, 1108, 562, 942, 1536, 1401, 1565, 1142, 1091, 1781, 846, 260, 810, 1722, 594, 1052, 865, 622, 960, 1410, 357, 1302, 108, 828, 1597, 281, 188, 291, 394, 371, 125, 1642, 1215, 993, 1733, 1489, 650, 174, 390, 1321, 912, 771, 1450, 1546, 270, 1225, 1288, 1350, 945, 713, 393, 1728, 252, 882, 1184, 1433, 228, 27, 1374, 1289, 1312, 1741, 1426, 540, 704, 1281, 198, 352, 1612, 476, 674, 184]}, 'schema': {'numeric': ['x0', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7', 'x8', 'x9', 'x10', 'x11', 'x12', 'x13', 'x14', 'x15', 'x16', 'x17', 'x18', 'x19', 'x20', 'x21', 'x22', 'x23', 'x24', 'x25', 'x26', 'x27', 'x28', 'x29', 'x30', 'x31', 'x32', 'x33', 'x34', 'x35', 'x36', 'x37', 'x38', 'x39', 'x40', 'x41', 'x42', 'x43', 'x44', 'x45', 'x46', 'x47', 'x48', 'x49', 'x50', 'x51', 'x52', 'x53', 'x54', 'x55', 'x56', 'x57', 'x58', 'x59', 'x60', 'x61', 'x62', 'x63'], 'categorical': []}, 'plan': {'actions': [{'kind': 'train', 'line': 5, 'model': 'linear'}, {'kind': 'evaluate', 'line': 6, 'model': 'linear'}, {'kind': 'train', 'line': 7, 'model': 'forest'}, {'kind': 'evaluate', 'line': 8, 'model': 'forest'}, {'kind': 'train', 'line': 9, 'model': 'tree'}, {'kind': 'evaluate', 'line': 10, 'model': 'tree'}], 'dataset': 'datasets/digits.csv', 'drop': [], 'explain': True, 'lines': {'assess': 12, 'evaluate': 6, 'explain': 13, 'predict': 2, 'prepare': 4, 'read': 1, 'select': 11, 'split': 3, 'train': 5}, 'metric': 'accuracy', 'models': [{'algorithm': 'logistic', 'line': 5, 'name': 'linear', 'params': {'C': 1.0}}, {'algorithm': 'forest', 'line': 7, 'name': 'forest', 'params': {'depth': 6, 'trees': 40}}, {'algorithm': 'tree', 'line': 9, 'name': 'tree', 'params': {'depth': 5}}], 'prepare': {'categorical': 'most_frequent', 'numeric': 'median', 'scale': 'standard'}, 'source': 'read "datasets/digits.csv"\npredict "target" as classification\nsplit stratified train 60% validation 20% test 20% seed 1\nprepare numeric median scale standard categorical most_frequent on train\ntrain linear logistic C=1 on train\nevaluate linear on validation\ntrain forest forest trees=40 depth=6 on train\nevaluate forest on validation\ntrain tree tree depth=5 on train\nevaluate tree on validation\nselect best by accuracy\nassess best on test\nexplain\n', 'source_sha256': '049e792d201b240652c2699dcc699be9a75d9e2658b0ed2631922076cdfa2a9f', 'split': {'by': None, 'fractions': [0.6, 0.2, 0.2], 'seed': 1, 'strategy': 'stratified'}, 'target': 'target', 'task': 'classification', 'version': 1}}
+
+def run(data_path=None):
+    base = Path(__file__).resolve().parent
+    path = Path(data_path) if data_path is not None else base / "data.csv"
+    raw = path.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != SPEC["dataset_sha256"]:
+        raise ValueError("The CSV fingerprint differs from the exported dataset.")
+    df = pd.read_csv(path, float_precision="round_trip")
+    p, ids = SPEC["plan"], SPEC["partitions"]
+    features = SPEC["schema"]
+    numeric, categorical = features["numeric"], features["categorical"]
+    blocks = []
+    if numeric:
+        steps = [SimpleImputer(strategy=p["prepare"]["numeric"], keep_empty_features=True)]
+        if p["prepare"]["scale"] == "standard": steps.append(StandardScaler())
+        blocks.append(("numeric", make_pipeline(*steps), numeric))
+    if categorical:
+        blocks.append(("categorical", make_pipeline(SimpleImputer(strategy=p["prepare"]["categorical"], fill_value="__MISSING__", keep_empty_features=True),
+                                                        OneHotEncoder(handle_unknown="ignore", sparse_output=False)), categorical))
+    transformer = ColumnTransformer(blocks, remainder="drop")
+    y = df[p["target"]]; train, valid, test = (ids[k] for k in ("train", "validation", "test"))
+    def metrics(actual, pred):
+        if p["task"] == "classification":
+            return {"accuracy": float(accuracy_score(actual, pred)), "balanced_accuracy": float(balanced_accuracy_score(actual, pred)),
+                    "macro_f1": float(f1_score(actual, pred, average="macro", zero_division=0))}
+        return {"rmse": float(root_mean_squared_error(actual, pred)), "mae": float(mean_absolute_error(actual, pred)), "r2": float(r2_score(actual, pred))}
+    models, scores, predictions = {}, {}, {}
+    with threadpool_limits(limits=1):
+        Xtrain = transformer.fit_transform(df.iloc[train])
+        Xvalid = transformer.transform(df.iloc[valid])
+        for spec in p["models"]:
+            name, kind, par = spec["name"], spec["algorithm"], spec["params"]
+            seed = p["split"]["seed"]
+            if kind == "logistic": estimator = LogisticRegression(C=par.get("C", 1.0), solver="lbfgs", max_iter=2000, random_state=seed)
+            elif kind == "ridge": estimator = Ridge(alpha=par.get("alpha", 1.0), solver="cholesky")
+            elif kind == "forest":
+                cls = RandomForestClassifier if p["task"] == "classification" else RandomForestRegressor
+                estimator = cls(n_estimators=par.get("trees", 40), max_depth=par.get("depth", None), random_state=seed, n_jobs=1)
+            else:
+                cls = DecisionTreeClassifier if p["task"] == "classification" else DecisionTreeRegressor
+                estimator = cls(max_depth=par.get("depth", None), random_state=seed)
+            estimator.fit(Xtrain, y.iloc[train]); models[name] = estimator
+            pred = estimator.predict(Xvalid); predictions[name] = pred.tolist()
+            scores[name] = metrics(y.iloc[valid], pred)
+        ordered = [item["name"] for item in p["models"]]
+        values = [scores[name][p["metric"]] for name in ordered]
+        position = int(np.argmin(values)) if p["metric"] in {"rmse", "mae"} else int(np.argmax(values))
+        selected = ordered[position]
+        test_pred = models[selected].predict(transformer.transform(df.iloc[test]))
+        result = {"selected": selected, "validation": scores, "validation_predictions": predictions,
+                  "test": metrics(y.iloc[test], test_pred), "test_predictions": test_pred.tolist()}
+    return result
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--data", type=Path)
+    parser.add_argument("--output", type=Path, default=Path("replay_result.json"))
+    args = parser.parse_args()
+    result = run(args.data)
+    args.output.write_text(json.dumps(result, indent=2, allow_nan=False)+"\n")
+    print(json.dumps({"selected": result["selected"], "test": result["test"]}, indent=2))

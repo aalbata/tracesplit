@@ -1,0 +1,74 @@
+[
+  {
+    "name": "iris",
+    "rows": 150,
+    "predictors": 4,
+    "task": "classification",
+    "split": "stratified",
+    "origin": "scikit-learn bundled real dataset",
+    "sha256": "10aa004296e04a515822d6dd9d563e4f98546bd885c45bd60786fd8115d6971d"
+  },
+  {
+    "name": "wine",
+    "rows": 178,
+    "predictors": 13,
+    "task": "classification",
+    "split": "stratified",
+    "origin": "scikit-learn bundled real dataset",
+    "sha256": "2c6120101576965bd62cb22ab7a02d593f0918327cbd2ac54ca0e52cc356060b"
+  },
+  {
+    "name": "breast_cancer",
+    "rows": 569,
+    "predictors": 30,
+    "task": "classification",
+    "split": "stratified",
+    "origin": "scikit-learn bundled real dataset",
+    "sha256": "6b649815869a967a273c7f01e9f1c0af6b11f854e99c1a2e854b97d437b4e8a8"
+  },
+  {
+    "name": "digits",
+    "rows": 1797,
+    "predictors": 64,
+    "task": "classification",
+    "split": "stratified",
+    "origin": "scikit-learn bundled real dataset",
+    "sha256": "8b1ba31dae39a01ac803c55986ce0ae528c32b65b88471b4884bd4048535b40c"
+  },
+  {
+    "name": "diabetes",
+    "rows": 442,
+    "predictors": 10,
+    "task": "regression",
+    "split": "random",
+    "origin": "scikit-learn bundled real dataset",
+    "sha256": "c114d448f30bd4157fe94b415bcb11494293a74e3cb21fa2ce0df970085d523b"
+  },
+  {
+    "name": "mixed",
+    "rows": 800,
+    "predictors": 14,
+    "task": "classification",
+    "split": "stratified",
+    "origin": "generated stress fixture with missing values and categories",
+    "sha256": "5fa5d2b91c9d860ca2a881a251d99ff98b7501c93179795f3c148e7bddc43e17"
+  },
+  {
+    "name": "grouped",
+    "rows": 600,
+    "predictors": 8,
+    "task": "classification",
+    "split": "grouped",
+    "origin": "generated repeated-subject stress fixture",
+    "sha256": "985cbb241a3ce509a653727c5344838e40f0bf81258ac56f2474331927c24410"
+  },
+  {
+    "name": "temporal",
+    "rows": 600,
+    "predictors": 8,
+    "task": "regression",
+    "split": "temporal",
+    "origin": "generated chronological stress fixture",
+    "sha256": "7f06a2b92ff7e7ba85f1b933e29dca81dff4d37af020ceae8059811ecfd6766b"
+  }
+]

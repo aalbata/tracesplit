@@ -1,0 +1,14 @@
+family,inputs,expressible_in_tracesplit,tracesplit_rejected,mlw_rejected,tracesplit_codes,mlw_errors
+valid_workflow,8,True,0,0,,
+unsplit_fit,8,True,8,8,E_ORDER,PartitionError
+preprocess_before_split,8,True,8,0,E_ORDER,
+prepare_all,8,True,8,0,E_FIT_SCOPE,
+fit_validation,8,True,8,0,E_FIT_SCOPE,
+fit_test,8,True,8,8,E_FIT_SCOPE,PartitionError
+test_rows_in_training,8,False,8,8,No statement can fit an estimator on rows outside the training partition.,PartitionError
+evaluate_test,8,True,8,8,E_EVAL_SCOPE,PartitionError
+select_by_test,8,False,8,8,Selection has no partition argument; it always uses validation scores.,PartitionError
+assess_validation,8,True,8,8,E_ASSESS_SCOPE,PartitionError
+second_assessment,8,True,8,8,E_TERMINAL,PartitionError
+post_assessment_fit,8,True,8,0,E_TERMINAL,
+missing_assessment,8,True,8,0,E_INCOMPLETE,

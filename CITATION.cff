@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite this research software by its title, author, and version. No archival DOI has been assigned."
+title: "TraceSplit"
+type: software
+version: 0.1.0
+date-released: 2026-10-30
+authors:
+  - family-names: "Al Bataineh"
+    given-names: "Ali"
+license: MIT
+repository-code: "https://github.com/aalbata/tracesplit"
+abstract: "A checked tabular machine-learning language with source-linked evidence, a standard-library evidence checker, and standalone Python replay."

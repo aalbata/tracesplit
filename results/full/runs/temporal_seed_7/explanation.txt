@@ -1,0 +1,33 @@
+TraceSplit execution explanation
+
+Dataset fingerprint: 7f06a2b92ff7e7ba85f1b933e29dca81dff4d37af020ceae8059811ecfd6766b
+Target: target (regression).
+Split strategy: temporal; seed: 7.
+Rows: 360 training, 120 validation, 120 test.
+Preprocessing was fitted on the recorded training rows only.
+Numeric predictors: x0, x1, x2, x3, x4, x5, x6, x7.
+Categorical predictors: (none).
+Candidate linear: validation rmse = 0.77039717.
+Candidate forest: validation rmse = 1.1935834.
+Candidate tree: validation rmse = 1.3781711.
+Selected candidate: linear. Ties use declaration order.
+The selected model was assessed once in this run; it was not refitted on validation data.
+A separate run can reuse the same test set. This tool does not prevent that.
+These statements describe recorded operations, not causal feature explanations or a security attestation.
+
+Source-linked event record
+Line 3: split on all (600 rows).
+Line 4: prepare_fit on train (360 rows).
+Line 4: transform on train (360 rows).
+Line 5: fit on train (360 rows).
+Line 6: transform on validation (120 rows).
+Line 6: evaluate on validation (120 rows).
+Line 7: fit on train (360 rows).
+Line 8: transform on validation (120 rows).
+Line 8: evaluate on validation (120 rows).
+Line 9: fit on train (360 rows).
+Line 10: transform on validation (120 rows).
+Line 10: evaluate on validation (120 rows).
+Line 11: select on validation (120 rows).
+Line 12: transform on test (120 rows).
+Line 12: assess on test (120 rows).

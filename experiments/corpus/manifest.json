@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "valid_breast_cancer_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_breast_cancer_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_breast_cancer_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_breast_cancer_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_breast_cancer_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_breast_cancer_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_breast_cancer_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_breast_cancer_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_breast_cancer_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_breast_cancer_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_breast_cancer_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_breast_cancer_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_breast_cancer_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_breast_cancer_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_breast_cancer_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_breast_cancer_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_breast_cancer_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_breast_cancer_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_breast_cancer_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_breast_cancer_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_breast_cancer_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_breast_cancer_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_breast_cancer_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_breast_cancer_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_breast_cancer_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_breast_cancer_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_breast_cancer_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_breast_cancer_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_breast_cancer_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_breast_cancer_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_diabetes_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_diabetes_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_diabetes_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_diabetes_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_diabetes_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_diabetes_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_diabetes_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_diabetes_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_diabetes_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_diabetes_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_diabetes_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_diabetes_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_diabetes_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_diabetes_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_diabetes_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_diabetes_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_diabetes_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_diabetes_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_diabetes_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_diabetes_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_diabetes_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_diabetes_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_diabetes_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_diabetes_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_diabetes_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_diabetes_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_diabetes_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_diabetes_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_diabetes_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_diabetes_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_digits_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_digits_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_digits_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_digits_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_digits_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_digits_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_digits_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_digits_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_digits_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_digits_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_digits_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_digits_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_digits_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_digits_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_digits_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_digits_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_digits_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_digits_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_digits_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_digits_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_digits_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_digits_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_digits_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_digits_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_digits_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_digits_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_digits_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_digits_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_digits_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_digits_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_grouped_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_grouped_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_grouped_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_grouped_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_grouped_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_grouped_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_grouped_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_grouped_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_grouped_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_grouped_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_grouped_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_grouped_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_grouped_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_grouped_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_grouped_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_grouped_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_grouped_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_grouped_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_grouped_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_grouped_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_grouped_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_grouped_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_grouped_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_grouped_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_grouped_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_grouped_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_grouped_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_grouped_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_grouped_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_grouped_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_iris_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_iris_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_iris_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_iris_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_iris_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_iris_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_iris_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_iris_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_iris_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_iris_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_iris_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_iris_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_iris_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_iris_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_iris_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_iris_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_iris_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_iris_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_iris_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_iris_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_iris_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_iris_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_iris_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_iris_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_iris_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_iris_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_iris_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_iris_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_iris_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_iris_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_mixed_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_mixed_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_mixed_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_mixed_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_mixed_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_mixed_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_mixed_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_mixed_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_mixed_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_mixed_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_mixed_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_mixed_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_mixed_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_mixed_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_mixed_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_mixed_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_mixed_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_mixed_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_mixed_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_mixed_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_mixed_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_mixed_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_mixed_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_mixed_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_mixed_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_mixed_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_mixed_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_mixed_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_mixed_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_mixed_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_temporal_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_temporal_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_temporal_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_temporal_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_temporal_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_temporal_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_temporal_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_temporal_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_temporal_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_temporal_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_temporal_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_temporal_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_temporal_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_temporal_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_temporal_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_temporal_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_temporal_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_temporal_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_temporal_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_temporal_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_temporal_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_temporal_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_temporal_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_temporal_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_temporal_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_temporal_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_temporal_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_temporal_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_temporal_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_temporal_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  },
+  {
+    "id": "valid_wine_median_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_wine_median_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_wine_mean_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_wine_mean_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_wine_most_frequent_standard",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "valid_wine_most_frequent_none",
+    "valid": true,
+    "family": "valid_configuration"
+  },
+  {
+    "id": "invalid_wine_unknown_task",
+    "valid": false,
+    "family": "unknown_task"
+  },
+  {
+    "id": "invalid_wine_preprocess_before_split",
+    "valid": false,
+    "family": "preprocess_before_split"
+  },
+  {
+    "id": "invalid_wine_repeated_split",
+    "valid": false,
+    "family": "repeated_split"
+  },
+  {
+    "id": "invalid_wine_repeated_prepare",
+    "valid": false,
+    "family": "repeated_prepare"
+  },
+  {
+    "id": "invalid_wine_fit_validation",
+    "valid": false,
+    "family": "fit_validation"
+  },
+  {
+    "id": "invalid_wine_prepare_all",
+    "valid": false,
+    "family": "prepare_all"
+  },
+  {
+    "id": "invalid_wine_evaluate_test",
+    "valid": false,
+    "family": "evaluate_test"
+  },
+  {
+    "id": "invalid_wine_assess_validation",
+    "valid": false,
+    "family": "assess_validation"
+  },
+  {
+    "id": "invalid_wine_select_too_early",
+    "valid": false,
+    "family": "select_too_early"
+  },
+  {
+    "id": "invalid_wine_undefined_candidate",
+    "valid": false,
+    "family": "undefined_candidate"
+  },
+  {
+    "id": "invalid_wine_duplicate_candidate",
+    "valid": false,
+    "family": "duplicate_candidate"
+  },
+  {
+    "id": "invalid_wine_post_assessment_fit",
+    "valid": false,
+    "family": "post_assessment_fit"
+  },
+  {
+    "id": "invalid_wine_bad_percentages",
+    "valid": false,
+    "family": "bad_percentages"
+  },
+  {
+    "id": "invalid_wine_bad_seed",
+    "valid": false,
+    "family": "bad_seed"
+  },
+  {
+    "id": "invalid_wine_unsupported_algorithm",
+    "valid": false,
+    "family": "unsupported_algorithm"
+  },
+  {
+    "id": "invalid_wine_wrong_task_algorithm",
+    "valid": false,
+    "family": "wrong_task_algorithm"
+  },
+  {
+    "id": "invalid_wine_unknown_parameter",
+    "valid": false,
+    "family": "unknown_parameter"
+  },
+  {
+    "id": "invalid_wine_bad_parameter_range",
+    "valid": false,
+    "family": "bad_parameter_range"
+  },
+  {
+    "id": "invalid_wine_duplicate_parameter",
+    "valid": false,
+    "family": "duplicate_parameter"
+  },
+  {
+    "id": "invalid_wine_missing_assessment",
+    "valid": false,
+    "family": "missing_assessment"
+  },
+  {
+    "id": "invalid_wine_wrong_metric",
+    "valid": false,
+    "family": "wrong_metric"
+  },
+  {
+    "id": "invalid_wine_drop_target",
+    "valid": false,
+    "family": "drop_target"
+  },
+  {
+    "id": "invalid_wine_second_assessment",
+    "valid": false,
+    "family": "second_assessment"
+  },
+  {
+    "id": "invalid_wine_arbitrary_python",
+    "valid": false,
+    "family": "arbitrary_python"
+  }
+]

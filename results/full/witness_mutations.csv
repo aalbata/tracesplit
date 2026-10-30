@@ -1,0 +1,601 @@
+case,family,rejected_with_data,rejected_without_data,errors_with_data
+iris_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+iris_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+iris_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+iris_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+iris_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+iris_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+iris_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+iris_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+iris_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+iris_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+iris_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+iris_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+iris_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+iris_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+iris_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+iris_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+iris_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+iris_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+iris_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+iris_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+iris_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+iris_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+iris_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+iris_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+iris_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+iris_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+iris_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+iris_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+iris_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+iris_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+iris_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+iris_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+iris_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+iris_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+iris_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+iris_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+iris_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+iris_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+iris_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+iris_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+iris_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+iris_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+iris_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+iris_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+iris_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+iris_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+iris_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+iris_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+iris_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+iris_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+iris_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+iris_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+iris_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+iris_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+iris_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+iris_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+wine_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+wine_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+wine_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+wine_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+wine_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+wine_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+wine_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+wine_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+wine_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+wine_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+wine_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+wine_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+wine_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+wine_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+wine_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+wine_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+wine_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+wine_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+wine_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+wine_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+wine_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+wine_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+wine_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+wine_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+wine_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+wine_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+wine_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+wine_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+wine_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+wine_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+wine_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+wine_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+wine_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+wine_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+wine_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+wine_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+wine_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+wine_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+wine_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+wine_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+wine_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+wine_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+wine_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+wine_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+wine_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+wine_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+wine_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+wine_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+wine_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+wine_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+wine_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+wine_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+wine_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+wine_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+wine_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+wine_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+breast_cancer_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+breast_cancer_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+breast_cancer_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+breast_cancer_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+breast_cancer_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+breast_cancer_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+breast_cancer_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+breast_cancer_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+breast_cancer_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+breast_cancer_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+breast_cancer_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+breast_cancer_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+breast_cancer_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+breast_cancer_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+breast_cancer_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+breast_cancer_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+breast_cancer_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+breast_cancer_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+breast_cancer_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+breast_cancer_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+breast_cancer_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+breast_cancer_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+breast_cancer_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+breast_cancer_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+breast_cancer_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+breast_cancer_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+breast_cancer_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+breast_cancer_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+breast_cancer_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+breast_cancer_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+breast_cancer_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+breast_cancer_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+breast_cancer_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+breast_cancer_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+breast_cancer_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+breast_cancer_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+breast_cancer_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+breast_cancer_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+breast_cancer_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+breast_cancer_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+breast_cancer_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+breast_cancer_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+breast_cancer_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+breast_cancer_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+breast_cancer_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+breast_cancer_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+breast_cancer_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+breast_cancer_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+breast_cancer_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+breast_cancer_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+breast_cancer_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+breast_cancer_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+breast_cancer_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+breast_cancer_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+breast_cancer_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+breast_cancer_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+digits_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+digits_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+digits_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+digits_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+digits_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+digits_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+digits_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+digits_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+digits_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+digits_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+digits_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+digits_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+digits_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+digits_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+digits_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+digits_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+digits_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+digits_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+digits_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+digits_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+digits_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+digits_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+digits_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+digits_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+digits_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+digits_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+digits_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+digits_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+digits_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+digits_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+digits_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+digits_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+digits_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+digits_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+digits_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+digits_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+digits_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+digits_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+digits_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+digits_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+digits_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+digits_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+digits_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+digits_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+digits_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+digits_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+digits_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+digits_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+digits_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+digits_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+digits_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+digits_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+digits_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+digits_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+digits_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+digits_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+diabetes_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+diabetes_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+diabetes_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+diabetes_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+diabetes_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+diabetes_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+diabetes_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+diabetes_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+diabetes_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+diabetes_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+diabetes_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+diabetes_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+diabetes_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+diabetes_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+diabetes_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+diabetes_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+diabetes_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+diabetes_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+diabetes_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+diabetes_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+diabetes_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+diabetes_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+diabetes_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+diabetes_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+diabetes_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+diabetes_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+diabetes_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+diabetes_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+diabetes_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+diabetes_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+diabetes_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+diabetes_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+diabetes_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+diabetes_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+diabetes_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+diabetes_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+diabetes_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+diabetes_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+diabetes_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+diabetes_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+diabetes_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+diabetes_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+diabetes_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+diabetes_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+diabetes_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+diabetes_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+diabetes_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+diabetes_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+diabetes_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+diabetes_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+diabetes_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+diabetes_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+diabetes_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+diabetes_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+diabetes_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+diabetes_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+mixed_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+mixed_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+mixed_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+mixed_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+mixed_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+mixed_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+mixed_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+mixed_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+mixed_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+mixed_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+mixed_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+mixed_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+mixed_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+mixed_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+mixed_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+mixed_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+mixed_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+mixed_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+mixed_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+mixed_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+mixed_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+mixed_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+mixed_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+mixed_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+mixed_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+mixed_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+mixed_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+mixed_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+mixed_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+mixed_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+mixed_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+mixed_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+mixed_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+mixed_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+mixed_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+mixed_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+mixed_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+mixed_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+mixed_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+mixed_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+mixed_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+mixed_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+mixed_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+mixed_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+mixed_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+mixed_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+mixed_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+mixed_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+mixed_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+mixed_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+mixed_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+mixed_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+mixed_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+mixed_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+mixed_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+mixed_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+grouped_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+grouped_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+grouped_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+grouped_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+grouped_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+grouped_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+grouped_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+grouped_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+grouped_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+grouped_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+grouped_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+grouped_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+grouped_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+grouped_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+grouped_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+grouped_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+grouped_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+grouped_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+grouped_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+grouped_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+grouped_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+grouped_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+grouped_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+grouped_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+grouped_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+grouped_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+grouped_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+grouped_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+grouped_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+grouped_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+grouped_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+grouped_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+grouped_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+grouped_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+grouped_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+grouped_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+grouped_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+grouped_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+grouped_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+grouped_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+grouped_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+grouped_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+grouped_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+grouped_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+grouped_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+grouped_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+grouped_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+grouped_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+grouped_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+grouped_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+grouped_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+grouped_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+grouped_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+grouped_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+grouped_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+grouped_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+temporal_seed_0,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_0,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_0,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_0,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_0,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+temporal_seed_0,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+temporal_seed_0,second_assessment,True,True,Event count does not match the workflow protocol.
+temporal_seed_0,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+temporal_seed_0,source_fingerprint,True,True,Source fingerprint mismatch.
+temporal_seed_0,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+temporal_seed_0,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+temporal_seed_0,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+temporal_seed_0,model_fingerprint,True,True,Model fingerprint mismatch.
+temporal_seed_0,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+temporal_seed_0,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+temporal_seed_1,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_1,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_1,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_1,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_1,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+temporal_seed_1,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+temporal_seed_1,second_assessment,True,True,Event count does not match the workflow protocol.
+temporal_seed_1,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+temporal_seed_1,source_fingerprint,True,True,Source fingerprint mismatch.
+temporal_seed_1,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+temporal_seed_1,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+temporal_seed_1,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+temporal_seed_1,model_fingerprint,True,True,Model fingerprint mismatch.
+temporal_seed_1,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+temporal_seed_1,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+temporal_seed_7,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_7,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_7,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_7,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_7,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+temporal_seed_7,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+temporal_seed_7,second_assessment,True,True,Event count does not match the workflow protocol.
+temporal_seed_7,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+temporal_seed_7,source_fingerprint,True,True,Source fingerprint mismatch.
+temporal_seed_7,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+temporal_seed_7,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+temporal_seed_7,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+temporal_seed_7,model_fingerprint,True,True,Model fingerprint mismatch.
+temporal_seed_7,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+temporal_seed_7,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+temporal_seed_42,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_42,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_42,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_42,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_42,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+temporal_seed_42,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+temporal_seed_42,second_assessment,True,True,Event count does not match the workflow protocol.
+temporal_seed_42,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+temporal_seed_42,source_fingerprint,True,True,Source fingerprint mismatch.
+temporal_seed_42,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+temporal_seed_42,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+temporal_seed_42,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+temporal_seed_42,model_fingerprint,True,True,Model fingerprint mismatch.
+temporal_seed_42,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+temporal_seed_42,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.
+temporal_seed_2026,prepare_fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_2026,fit_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_2026,evaluate_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_2026,assess_scope,True,True,"Event kind, source line, or role does not match the protocol. | Recorded row use violates the required partition scope."
+temporal_seed_2026,partition_overlap,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope.
+temporal_seed_2026,partition_omission,True,True,Partitions must cover each row exactly once. | Recorded row use violates the required partition scope. | Recorded row use violates the required partition scope. | Invalid final result shape.
+temporal_seed_2026,second_assessment,True,True,Event count does not match the workflow protocol.
+temporal_seed_2026,wrong_selection,True,True,Selected candidate violates the metric or declaration-order tie rule. | Event refers to the wrong candidate. | Event refers to the wrong candidate. | Event refers to the wrong candidate.
+temporal_seed_2026,source_fingerprint,True,True,Source fingerprint mismatch.
+temporal_seed_2026,source_location,True,True,"Event kind, source line, or role does not match the protocol."
+temporal_seed_2026,metric_recomputed_chain,True,False,Independent test metric calculation disagrees.
+temporal_seed_2026,dataset_fingerprint,True,False,Dataset fingerprint mismatch.
+temporal_seed_2026,model_fingerprint,True,True,Model fingerprint mismatch.
+temporal_seed_2026,preprocessing_fingerprint,True,True,Preprocessing fingerprint mismatch.
+temporal_seed_2026,broken_chain,True,True,Broken event ordering or hash chain. | Broken event ordering or hash chain.

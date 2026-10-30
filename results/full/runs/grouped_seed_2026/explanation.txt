@@ -1,0 +1,33 @@
+TraceSplit execution explanation
+
+Dataset fingerprint: 985cbb241a3ce509a653727c5344838e40f0bf81258ac56f2474331927c24410
+Target: target (classification).
+Split strategy: grouped; seed: 2026.
+Rows: 360 training, 120 validation, 120 test.
+Preprocessing was fitted on the recorded training rows only.
+Numeric predictors: x0, x1, x2, x3, x4, x5, x6, x7.
+Categorical predictors: (none).
+Candidate linear: validation accuracy = 0.725.
+Candidate forest: validation accuracy = 0.74166667.
+Candidate tree: validation accuracy = 0.65.
+Selected candidate: forest. Ties use declaration order.
+The selected model was assessed once in this run; it was not refitted on validation data.
+A separate run can reuse the same test set. This tool does not prevent that.
+These statements describe recorded operations, not causal feature explanations or a security attestation.
+
+Source-linked event record
+Line 3: split on all (600 rows).
+Line 4: prepare_fit on train (360 rows).
+Line 4: transform on train (360 rows).
+Line 5: fit on train (360 rows).
+Line 6: transform on validation (120 rows).
+Line 6: evaluate on validation (120 rows).
+Line 7: fit on train (360 rows).
+Line 8: transform on validation (120 rows).
+Line 8: evaluate on validation (120 rows).
+Line 9: fit on train (360 rows).
+Line 10: transform on validation (120 rows).
+Line 10: evaluate on validation (120 rows).
+Line 11: select on validation (120 rows).
+Line 12: transform on test (120 rows).
+Line 12: assess on test (120 rows).

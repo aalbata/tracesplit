@@ -1,0 +1,10 @@
+fault,cases,outputs_differ_from_correct,selected_differs_from_correct,honest_record_rejected_with_csv,echo_record_rejected_with_csv,echo_record_rejected_without_csv,replay_detected,perturbation_detected
+prepare_all_rows,40,26,2,40,0,0,26,40
+prepare_train_validation,40,23,1,40,0,0,23,0
+fit_train_validation,40,39,21,40,0,0,39,0
+test_rows_in_training,40,40,7,40,0,0,40,40
+select_by_test,40,10,10,40,10,10,10,19
+refit_before_assessment,40,27,0,40,0,0,27,0
+undeclared_seed,40,33,4,0,0,0,33,0
+partition_rule_ignored,10,10,2,0,10,0,0,0
+target_proxy_column,40,,,0,0,0,0,0

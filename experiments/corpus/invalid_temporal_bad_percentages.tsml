@@ -1,0 +1,13 @@
+read "datasets/temporal.csv"
+predict "target" as regression
+split temporal by "time" train 61% validation 20% test 20% seed 42
+prepare numeric median scale standard categorical most_frequent on train
+train linear ridge alpha=1 on train
+evaluate linear on validation
+train forest forest trees=40 depth=6 on train
+evaluate forest on validation
+train tree tree depth=5 on train
+evaluate tree on validation
+select best by rmse
+assess best on test
+explain

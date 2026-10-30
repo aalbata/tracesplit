@@ -1,0 +1,13 @@
+read "datasets/breast_cancer.csv"
+predict "target" as classification
+split stratified train 60% validation 20% test 20% seed 42
+prepare numeric median scale standard categorical most_frequent on train
+train linear logistic C=1 on train
+evaluate linear on validation
+train forest forest trees=40 trees=50 depth=6 on train
+evaluate forest on validation
+train tree tree depth=5 on train
+evaluate tree on validation
+select best by accuracy
+assess best on test
+explain

@@ -1,0 +1,105 @@
+dataset,family,expressible,tracesplit_accepted,tracesplit_error
+breast_cancer,valid_workflow,True,True,
+breast_cancer,fit_validation,True,False,E_FIT_SCOPE
+breast_cancer,fit_test,True,False,E_FIT_SCOPE
+breast_cancer,prepare_all,True,False,E_FIT_SCOPE
+breast_cancer,preprocess_before_split,True,False,E_ORDER
+breast_cancer,evaluate_test,True,False,E_EVAL_SCOPE
+breast_cancer,assess_validation,True,False,E_ASSESS_SCOPE
+breast_cancer,second_assessment,True,False,E_TERMINAL
+breast_cancer,post_assessment_fit,True,False,E_TERMINAL
+breast_cancer,unsplit_fit,True,False,E_ORDER
+breast_cancer,missing_assessment,True,False,E_INCOMPLETE
+breast_cancer,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+breast_cancer,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+diabetes,valid_workflow,True,True,
+diabetes,fit_validation,True,False,E_FIT_SCOPE
+diabetes,fit_test,True,False,E_FIT_SCOPE
+diabetes,prepare_all,True,False,E_FIT_SCOPE
+diabetes,preprocess_before_split,True,False,E_ORDER
+diabetes,evaluate_test,True,False,E_EVAL_SCOPE
+diabetes,assess_validation,True,False,E_ASSESS_SCOPE
+diabetes,second_assessment,True,False,E_TERMINAL
+diabetes,post_assessment_fit,True,False,E_TERMINAL
+diabetes,unsplit_fit,True,False,E_ORDER
+diabetes,missing_assessment,True,False,E_INCOMPLETE
+diabetes,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+diabetes,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+digits,valid_workflow,True,True,
+digits,fit_validation,True,False,E_FIT_SCOPE
+digits,fit_test,True,False,E_FIT_SCOPE
+digits,prepare_all,True,False,E_FIT_SCOPE
+digits,preprocess_before_split,True,False,E_ORDER
+digits,evaluate_test,True,False,E_EVAL_SCOPE
+digits,assess_validation,True,False,E_ASSESS_SCOPE
+digits,second_assessment,True,False,E_TERMINAL
+digits,post_assessment_fit,True,False,E_TERMINAL
+digits,unsplit_fit,True,False,E_ORDER
+digits,missing_assessment,True,False,E_INCOMPLETE
+digits,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+digits,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+grouped,valid_workflow,True,True,
+grouped,fit_validation,True,False,E_FIT_SCOPE
+grouped,fit_test,True,False,E_FIT_SCOPE
+grouped,prepare_all,True,False,E_FIT_SCOPE
+grouped,preprocess_before_split,True,False,E_ORDER
+grouped,evaluate_test,True,False,E_EVAL_SCOPE
+grouped,assess_validation,True,False,E_ASSESS_SCOPE
+grouped,second_assessment,True,False,E_TERMINAL
+grouped,post_assessment_fit,True,False,E_TERMINAL
+grouped,unsplit_fit,True,False,E_ORDER
+grouped,missing_assessment,True,False,E_INCOMPLETE
+grouped,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+grouped,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+iris,valid_workflow,True,True,
+iris,fit_validation,True,False,E_FIT_SCOPE
+iris,fit_test,True,False,E_FIT_SCOPE
+iris,prepare_all,True,False,E_FIT_SCOPE
+iris,preprocess_before_split,True,False,E_ORDER
+iris,evaluate_test,True,False,E_EVAL_SCOPE
+iris,assess_validation,True,False,E_ASSESS_SCOPE
+iris,second_assessment,True,False,E_TERMINAL
+iris,post_assessment_fit,True,False,E_TERMINAL
+iris,unsplit_fit,True,False,E_ORDER
+iris,missing_assessment,True,False,E_INCOMPLETE
+iris,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+iris,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+mixed,valid_workflow,True,True,
+mixed,fit_validation,True,False,E_FIT_SCOPE
+mixed,fit_test,True,False,E_FIT_SCOPE
+mixed,prepare_all,True,False,E_FIT_SCOPE
+mixed,preprocess_before_split,True,False,E_ORDER
+mixed,evaluate_test,True,False,E_EVAL_SCOPE
+mixed,assess_validation,True,False,E_ASSESS_SCOPE
+mixed,second_assessment,True,False,E_TERMINAL
+mixed,post_assessment_fit,True,False,E_TERMINAL
+mixed,unsplit_fit,True,False,E_ORDER
+mixed,missing_assessment,True,False,E_INCOMPLETE
+mixed,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+mixed,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+temporal,valid_workflow,True,True,
+temporal,fit_validation,True,False,E_FIT_SCOPE
+temporal,fit_test,True,False,E_FIT_SCOPE
+temporal,prepare_all,True,False,E_FIT_SCOPE
+temporal,preprocess_before_split,True,False,E_ORDER
+temporal,evaluate_test,True,False,E_EVAL_SCOPE
+temporal,assess_validation,True,False,E_ASSESS_SCOPE
+temporal,second_assessment,True,False,E_TERMINAL
+temporal,post_assessment_fit,True,False,E_TERMINAL
+temporal,unsplit_fit,True,False,E_ORDER
+temporal,missing_assessment,True,False,E_INCOMPLETE
+temporal,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+temporal,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
+wine,valid_workflow,True,True,
+wine,fit_validation,True,False,E_FIT_SCOPE
+wine,fit_test,True,False,E_FIT_SCOPE
+wine,prepare_all,True,False,E_FIT_SCOPE
+wine,preprocess_before_split,True,False,E_ORDER
+wine,evaluate_test,True,False,E_EVAL_SCOPE
+wine,assess_validation,True,False,E_ASSESS_SCOPE
+wine,second_assessment,True,False,E_TERMINAL
+wine,post_assessment_fit,True,False,E_TERMINAL
+wine,unsplit_fit,True,False,E_ORDER
+wine,missing_assessment,True,False,E_INCOMPLETE
+wine,test_rows_in_training,False,False,No statement can fit an estimator on rows outside the training partition.
+wine,select_by_test,False,False,Selection has no partition argument; it always uses validation scores.
