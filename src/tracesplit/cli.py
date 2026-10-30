@@ -15,7 +15,7 @@ def main(argv=None):
     run = sub.add_parser("run"); run.add_argument("program", type=Path); run.add_argument("--root", type=Path, default=Path(".")); run.add_argument("--out", type=Path, required=True); run.add_argument("--export", action="store_true")
     ver = sub.add_parser("verify"); ver.add_argument("evidence", type=Path); ver.add_argument("--data", type=Path)
     comp = sub.add_parser("compare"); comp.add_argument("first", type=Path); comp.add_argument("second", type=Path)
-    serve = sub.add_parser("serve"); serve.add_argument("--root", type=Path, default=Path(".")); serve.add_argument("--port", type=int, default=8765)
+    serve = sub.add_parser("serve"); serve.add_argument("--root", type=Path, default=Path(".")); serve.add_argument("--port", type=int, default=8765); serve.add_argument("--theme", choices=["crimson", "graphite", "forest", "plum", "navy"], default="crimson")
     args = parser.parse_args(argv)
     try:
         if args.command == "check":
@@ -28,7 +28,7 @@ def main(argv=None):
         elif args.command == "compare": report = compare_results(json.loads(args.first.read_text()), json.loads(args.second.read_text()))
         else:
             from .app import serve
-            serve(args.root, args.port); return 0
+            serve(args.root, args.port, args.theme); return 0
         print(json.dumps(report, indent=2)); return 0 if report["ok"] else 1
     except (LanguageError, ExecutionError, ValueError, OSError) as exc:
         print(str(exc), file=sys.stderr); return 2

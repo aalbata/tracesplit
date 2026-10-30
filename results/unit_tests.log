@@ -10,7 +10,7 @@ Name                         Stmts   Miss  Cover
 ------------------------------------------------
 src\tracesplit\__init__.py       4      0   100%
 src\tracesplit\__main__.py       2      2     0%
-src\tracesplit\app.py           81     10    88%
+src\tracesplit\app.py           88     13    85%
 src\tracesplit\cli.py           32      2    94%
 src\tracesplit\engine.py       200      8    96%
 src\tracesplit\evidence.py      40      1    98%
@@ -18,6 +18,6 @@ src\tracesplit\exporter.py      46      2    96%
 src\tracesplit\language.py     138      3    98%
 src\tracesplit\verifier.py     161     15    91%
 ------------------------------------------------
-TOTAL                          704     43    94%
+TOTAL                          711     46    94%
 Coverage JSON written to file results/coverage.json
-296 passed in 24.02s
+296 passed in 65.48s (0:01:05)

@@ -12,7 +12,7 @@
 \begin{document}
 \maketitle
 \vspace{-1em}
-This supplement accompanies \emph{Checking Machine-Learning Workflows Through Evidence Validation, Python Replay, and Counterfactual Tests}. The software release is TraceSplit 0.1.0. Every number below is generated from the saved result files by the script \path{scripts/fill_manuscript.py} in the artifact.
+This supplement accompanies \emph{Checking Machine-Learning Workflows Through Execution Evidence}. The software release is TraceSplit 0.1.0. Every number below is generated from the saved result files by the script \path{scripts/fill_manuscript.py} in the artifact.
 
 \section{Exact program grammar}
 The following is the distributed Lark grammar. Statement order, allowed names, parameter ranges, and role restrictions are checked after parsing. Each statement occupies one logical line.
@@ -227,7 +227,7 @@ temporal & 2026 & rmse & linear & 1.13862574\\
 \section{Timing and test evidence}
 The raw timing table has one row per paired observation: input rows, repetition, execution order, language time, precompiled-plan time, and their difference in milliseconds. The first 3 pairs at each size are warm-ups and are excluded from the 25 measured pairs. A seeded 10,000-resample percentile bootstrap is applied to the paired median. The observations include CSV loading and in-memory evidence creation but exclude interpreter startup, disk serialization, external validation, and the replay subprocess.
 
-The test suite passed 296 tests with 0 failures. Statement coverage was 94\% of 704 statements; the per-module values are in the machine-readable coverage report. A separate smoke script runs the command-line interface, the standard-library checker, the exported Python, and the numerical comparison in subprocesses. The checker can be invoked with \texttt{python -S}, which disables site-package initialization.
+The test suite passed 296 tests with 0 failures. Statement coverage was 94\% of 711 statements; the per-module values are in the machine-readable coverage report. A separate smoke script runs the command-line interface, the standard-library checker, the exported Python, and the numerical comparison in subprocesses. The checker can be invoked with \texttt{python -S}, which disables site-package initialization.
 
 \section{Artifact file map}
 Table~\ref{tab:files} connects the implementation and recorded results to the reviewer tasks.

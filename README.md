@@ -37,7 +37,7 @@ python scripts/smoke_test.py
 python -m tracesplit serve --root . --port 8765
 ```
 
-Open `http://127.0.0.1:8765` in a browser. Keep the terminal open and stop the server with Ctrl+C. The application offers eight editable examples, results, source-linked explanations, the evidence record, and standalone Python downloads. It is a local, single-user tool; do not expose its port publicly.
+Open `http://127.0.0.1:8765` in a browser. Keep the terminal open and stop the server with Ctrl+C. The page can reach the server only while that terminal stays open; if the server has been stopped, the page reports that it is unreachable. The `--theme` option selects an alternative color scheme (graphite, forest, plum, or navy). The application offers eight editable examples, results, source-linked explanations, the evidence record, and standalone Python downloads. It is a local, single-user tool; do not expose its port publicly.
 
 ## Inspect the evidence without machine-learning libraries
 

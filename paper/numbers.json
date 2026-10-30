@@ -125,7 +125,7 @@
   "tests_total": 296,
   "tests_failed": 0,
   "coverage_pct": "94",
-  "coverage_statements": 704,
+  "coverage_statements": 711,
   "python_version": "3.12.10",
   "processor": "Intel Core Ultra 7 155U",
   "logical_cpus": 14,

@@ -11,7 +11,7 @@
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,columns=fullflexible,keepspaces=true,showstringspaces=false,frame=none,xleftmargin=3pt,xrightmargin=3pt}
 \hyphenation{data-sets pre-pro-cess-ing coun-ter-fac-tu-al}
 \begin{document}
-\title{Checking Machine-Learning Workflows Through Evidence Validation, Python Replay, and Counterfactual Tests}
+\title{Checking Machine-Learning Workflows Through Execution Evidence}
 \author{Ali~Al~Bataineh%
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem A. Al Bataineh is with Computer Information Science, Higher Colleges of Technology, Abu Dhabi, United Arab Emirates. E-mail: aalbataineh@hct.ac.ae. ORCID: 0000-0001-9530-7950.}}
 \IEEEtitleabstractindextext{%
@@ -209,7 +209,7 @@ Correct-engine counterfactual invariants preserved & 80/80\\\bottomrule
 \end{tabular}
 \end{table}
 
-The automated implementation suite passed 296 tests with 94\% statement coverage over 704 statements. This suite overlaps the conformance corpus, so the counts are not independent observations. A subprocess smoke test separately executed the command-line interface, the standard-library checker, the exported Python script, and their comparison. Exact replay agreement shows that the two execution paths share the intended configuration on these inputs; both paths use scikit-learn and the same experimental specification, so a shared misunderstanding of the specification would survive this test.
+The automated implementation suite passed 296 tests with 94\% statement coverage over 711 statements. This suite overlaps the conformance corpus, so the counts are not independent observations. A subprocess smoke test separately executed the command-line interface, the standard-library checker, the exported Python script, and their comparison. Exact replay agreement shows that the two execution paths share the intended configuration on these inputs; both paths use scikit-learn and the same experimental specification, so a shared misunderstanding of the specification would survive this test.
 
 \subsection{The contribution of the original CSV (RQ2)}
 With the CSV supplied, the record checker rejected all 600 altered records. Without it, the checker rejected 520. The 80 additional rejections concern two mutation families across all 40 workflows: a changed dataset fingerprint and a coherently changed reported test metric. Without source data those fields are well formed; with source data the fingerprint can be checked and the metric recomputed from labels and saved predictions. The checker's median running time on a record with its CSV was 3.7 ms. This result identifies a specific information difference, not a general detection rate, and a consistent record with genuine labels can still describe a computation that did not occur.
