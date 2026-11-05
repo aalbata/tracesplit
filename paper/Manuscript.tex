@@ -1,10 +1,13 @@
-\documentclass[10pt,journal,compsoc]{IEEEtran}
+\documentclass[lettersize,journal]{IEEEtran}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage{graphicx,booktabs,array}
-\usepackage{listings}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{stfloats}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
 \usepackage{cite}
 \newtheorem{proposition}{Proposition}
 \newcommand{\tool}{TraceSplit}
@@ -13,17 +16,19 @@
 \begin{document}
 \title{Checking Machine-Learning Workflows Through Execution Evidence}
 \author{Ali~Al~Bataineh%
-\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem A. Al Bataineh is with Computer Information Science, Higher Colleges of Technology, Abu Dhabi, United Arab Emirates. E-mail: aalbataineh@hct.ac.ae. ORCID: 0000-0001-9530-7950.}}
-\IEEEtitleabstractindextext{%
+\thanks{Ali Al Bataineh is with Computer Information Science, Higher Colleges of Technology, Abu Dhabi, United Arab Emirates (e-mail: aalbataineh@hct.ac.ae; ORCID: 0000-0001-9530-7950).}}
+
+\markboth{IEEE Transactions on Software Engineering}%
+{Al Bataineh: Checking Machine-Learning Workflows Through Execution Evidence}
+
+\maketitle
+
 \begin{abstract}
-A machine-learning (ML) score depends on where transformations are fitted, which rows inform model selection, and whether held-out rows were used once. This article presents \tool{}, a closed workflow language for tabular classification and regression whose checker rejects protocol violations in the source, together with three forms of evidence about a completed run: a standard-library record checker, a standalone Python replay exported from the record, and fixed-partition counterfactual tests derived from a conditional held-out noninterference property. On 8 inputs and 5 seeds, all 40 workflows agree with their replays, all 600 altered records are rejected when the input file is supplied, and all 80 perturbations of the correct implementation preserve development state. An injected-fault study of 9 mechanisms and 330 faulty executions shows that the oracles cover different faults. Records that echo the declared protocol pass the checker, replay detects every fault that changes the compared outputs, and perturbation detects exactly the faults that make development state depend on held-out values. A matched comparison with the reference implementation of a recent workflow grammar on 12 violation families locates the boundary between a closed language and an embedded interface. The mechanisms complement one another and should be combined.
+A machine-learning score depends on where transformations are fitted, which rows inform model selection, and whether held-out rows were used once. This article presents \tool{}, a closed workflow language for tabular classification and regression whose checker rejects protocol violations in the source, together with three forms of evidence about a completed run: a standard-library record checker, a standalone Python replay exported from the record, and fixed-partition counterfactual tests derived from a conditional held-out noninterference property. On 8 inputs and 5 seeds, all 40 workflows agree with their replays, all 600 altered records are rejected when the input file is supplied, and all 80 perturbations of the correct implementation preserve development state. An injected-fault study of 9 mechanisms and 330 faulty executions shows that the oracles cover different faults. Records that echo the declared protocol pass the checker, replay detects every fault that changes the compared outputs, and perturbation detects exactly the faults that make development state depend on held-out values. A matched comparison with the reference implementation of a recent workflow grammar on 12 violation families locates the boundary between a closed language and an embedded interface. The mechanisms complement one another and should be combined.
 \end{abstract}
 \begin{IEEEkeywords}
 Machine-learning software, domain-specific languages, data leakage, reproducibility, metamorphic testing, execution evidence.
-\end{IEEEkeywords}}
-\maketitle
-\IEEEdisplaynontitleabstractindextext
-\IEEEpeerreviewmaketitle
+\end{IEEEkeywords}
 
 \section{Introduction}
 \IEEEPARstart{M}{achine-learning} (ML) experiments are executable software. A reported score depends not only on an estimator but also on how observations are divided, where transformations are fitted, how candidates are selected, and which outputs are inspected during development. Leakage between development and held-out data compromises the interpretation of an apparently successful experiment and has been documented across scientific fields \cite{kapoor2023}. Static analysis of notebooks shows that software-engineering techniques can expose problematic information flows in ordinary data-science code \cite{yang2022,urban2025}. A language for experiments should therefore be judged by the behavior it makes explicit and checkable, not by how many lines it removes.
@@ -152,7 +157,7 @@ The evaluation asks five research questions (RQs). RQ1 concerns conformance of t
 Table~\ref{tab:data} describes the 8 inputs. The five real datasets are small examples distributed with scikit-learn, whose documentation states that they are often too small to represent real-world learning tasks \cite{sklearndata}. Diabetes is loaded without the loader's default global scaling, so that fitted normalization is not inherited from outside the experiment \cite{sklearndiabetes}. The mixed fixture combines numeric predictors, two categorical columns, and missing values. The grouped fixture contains 60 groups of ten observations; the group column is excluded from predictors. The temporal fixture adds an ordered time key that is also excluded. The generator, exact CSV files, and hashes are distributed with the artifact.
 
 \begin{table}[t]
-\caption{Inputs used in the numerical evaluation. Rows is the number of observations; Features is the number of predictor columns, excluding the target and any split metadata column; Split is the declared partition strategy.}
+\caption{Inputs Used in the Numerical Evaluation}
 \label{tab:data}\centering\footnotesize
 \begin{tabular}{lrrll}\toprule
 Input & Rows & Features & Task & Split\\\midrule
@@ -166,6 +171,9 @@ Grouped fixture & 600 & 8 & Class. & Grouped\\
 Temporal fixture & 600 & 8 & Regr. & Temporal\\
 \bottomrule
 \end{tabular}
+
+\smallskip
+\parbox{0.95\columnwidth}{\footnotesize Rows is the number of observations. Features is the number of predictor columns, excluding the target and any split metadata column. Split is the declared partition strategy.}
 \end{table}
 
 Each input is evaluated at seeds 0, 1, 7, 42, 2026. Programs specify 60/20/20 training, validation, and test proportions, median numeric imputation, standard scaling, and most-frequent categorical imputation. Classification compares logistic regression ($C=1$), a 40-tree forest with maximum depth 6, and a decision tree of depth 5; regression substitutes ridge regression ($\alpha=1$). Selection uses accuracy for classification and RMSE for regression. This yields 40 workflows and 120 candidate fits per numerical execution path. Because temporal splitting is deterministic, the seed affects only the forest in the temporal workflows.
@@ -196,7 +204,7 @@ All experiments were executed on the author's computer, a Windows 11 workstation
 All 48 valid constructed programs were accepted and all 192 invalid programs were rejected. Across the 40 numerical workflows, every standalone replay agreed with the language execution on the selected candidate, candidate validation predictions and metrics, and selected test predictions and metrics; the largest observed absolute difference was 0. Table~\ref{tab:outcomes} collects these outcomes together with the record and counterfactual tests.
 
 \begin{table}[t]
-\caption{Observed outcomes on the constructed evaluation. Each row gives the number of cases with the expected outcome over the number of cases. Counts describe this suite, not estimated real-world error rates.}
+\caption{Observed Outcomes on the Constructed Evaluation}
 \label{tab:outcomes}\centering\footnotesize
 \begin{tabular}{p{0.68\columnwidth}r}\toprule
 Check & Outcome\\\midrule
@@ -207,6 +215,9 @@ Altered records rejected, CSV supplied & 600/600\\
 Altered records rejected, no CSV & 520/600\\
 Correct-engine counterfactual invariants preserved & 80/80\\\bottomrule
 \end{tabular}
+
+\smallskip
+\parbox{0.95\columnwidth}{\footnotesize Each row gives the number of cases with the expected outcome over the number of cases. Counts describe this suite, not estimated real-world error rates.}
 \end{table}
 
 The automated implementation suite passed 296 tests with 94\% statement coverage over 711 statements. This suite overlaps the conformance corpus, so the counts are not independent observations. A subprocess smoke test separately executed the command-line interface, the standard-library checker, the exported Python script, and their comparison. Exact replay agreement shows that the two execution paths share the intended configuration on these inputs; both paths use scikit-learn and the same experimental specification, so a shared misunderstanding of the specification would survive this test.
@@ -231,7 +242,7 @@ The perturbation oracle detected the faults in which development state depends o
 Table~\ref{tab:comparison} reports the matched comparison. Both tools accepted the valid workflow on all 8 inputs. \tool{} rejected all ten expressible violation families on every input, and the remaining two families cannot be written. mlw 1.1.2 rejected seven families on every input, each with a partition error raised before the computation: fitting before any split or on test rows, fitting on a frame that concatenates training and test rows, evaluating on test rows, assessing on validation rows, assessing the same held-out rows twice, and assessing a second model on an already assessed partition. It accepted the other five families on every input: preprocessing before the split, preparation fitted on all rows, fit on validation rows, development operation after assessment, workflow without final assessment.
 
 \begin{table}[t]
-\caption{Matched protocol-violation families decided by the \tool{} checker and by the mlw package, as the number of inputs on which the family was rejected over the number of inputs. Families marked not expressible have no \tool{} syntax.}
+\caption{Matched Protocol-Violation Families Decided by Each Tool}
 \label{tab:comparison}\centering\footnotesize
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{p{0.56\columnwidth}cc}\toprule
@@ -251,6 +262,9 @@ Development operation after assessment & 8/8 & 0/8\\
 Workflow without final assessment & 8/8 & 0/8\\
 \bottomrule
 \end{tabular}
+
+\smallskip
+\parbox{0.95\columnwidth}{\footnotesize Each cell is the number of inputs on which the tool rejected the family over the number of inputs. Families marked not expressible have no \tool{} syntax.}
 \end{table}
 
 The differences follow from the two designs rather than from the quality of either implementation. mlw guards the data that enter its verbs, so preprocessing performed before the split is invisible to it, while in a closed language the same operation is an ordering or scope error in the source. mlw accepts validation rows in fit by documented design, does not require a final assessment, and in the probed version accepted a validation evaluation after the assessment; the closed language fixes training as the only fitting role and makes assessment terminal. Conversely, mlw rejected the two families that \tool{} cannot express, because the concatenated frame has no registered role and because the held-out partition is spent after its first assessment. Both tools decide protocol violations before any computation, and neither examines the computation inside the backend, which is the subject of RQ3.
@@ -259,7 +273,7 @@ The differences follow from the two designs rather than from the quality of eith
 Table~\ref{tab:runtime} reports the measured paired overhead of entering through the language frontend. The median paired differences were 0.339, 1.075, 0.076 ms for 200, 2,000, 10,000 rows, and all three bootstrap intervals include zero. The frontend performs extra work, but the largest absolute median difference of 1.075 ms is small relative to the execution itself, and scheduling noise dominates at the largest input. Fig.~\ref{fig:runtime} displays the raw paired distributions.
 
 \begin{table}[t]
-\caption{In-process execution time in milliseconds for the language path and the precompiled-plan path. Each row summarizes 25 measured pairs. Language and Plan API are median times, $\Delta$ is the median of the paired differences, and the interval is a 10,000-resample percentile bootstrap interval for that median.}
+\caption{In-Process Execution Time in Milliseconds}
 \label{tab:runtime}\centering\footnotesize
 \begin{tabular}{rrrrl}\toprule
 Rows & Language & Plan API & Paired $\Delta$ & 95\% interval\\\midrule
@@ -268,6 +282,9 @@ Rows & Language & Plan API & Paired $\Delta$ & 95\% interval\\\midrule
 10,000 & 163.944 & 167.311 & 0.076 & [-3.207, 2.030]\\
 \bottomrule
 \end{tabular}
+
+\smallskip
+\parbox{0.95\columnwidth}{\footnotesize Each row summarizes 25 measured pairs. Language and Plan API are median times for the language path and the precompiled-plan path, $\Delta$ is the median of the paired differences, and the interval is a 10,000-resample percentile bootstrap interval for that median.}
 \end{table}
 
 \begin{figure}[t]
